@@ -1,17 +1,15 @@
 import React from "react";
-function Navbar() {
+function Navbar({ toggleSidebar }) {
   return (
     <>
       <div className="navbar_top flex">
         <div className="menu_wrapper">
           <div className="menu_logo">
-            <a href="#">
-          <div className="hamburger">
+            <button className="hamburger" onClick={toggleSidebar}>
             <span></span>
             <span></span>
             <span></span>
-          </div>
-          </a>
+          </button>
           <a href="#">
           <div className="logo">
             <img src="/../images/logo.png" alt="Logo" />
