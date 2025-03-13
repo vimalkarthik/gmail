@@ -1,8 +1,9 @@
 import React from "react";
-function Sidebar(){
+
+function Sidebar( { isSidebarOpen } ){
     return(
         <>
-        <div className="sidebar_wrapper">
+        <div className={`sidebar_wrapper ${isSidebarOpen ? "open" : "closed"}`}>
             <div className="compose_btn">
               <button>
                 <img src="/../images/pencil.png" alt="Pencil" />
