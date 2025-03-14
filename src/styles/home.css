@@ -126,10 +126,10 @@ ol li {
 .icons {
   width: 24px;
   height: 24px;
-  transition: 0.1s all ease;
+  transition: 0.1s all ease-in;
 }
 .icons:hover,
-.options:hover {
+.options:hover, .mail_hover_opt ul li:hover {
   outline: 10px solid #e9eef6;
   border-radius: 50%;
   background-color: #e9eef6;
@@ -323,9 +323,13 @@ ol li {
   align-items: center;
   justify-content: start;
   gap: 20px;
+  cursor: pointer;
 }
 .all_mails_wrapper table tbody tr:hover{
     box-shadow: inset 1px 0 0 rgb(218, 220, 224), inset -1px 0 0 rgb(218, 220, 224), 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+}
+.all_mails_wrapper table tbody tr:hover .mail_hover_opt{
+  opacity: 1;
 }
 .mailer_name {
   max-width: 168px;
@@ -427,10 +431,11 @@ ol li {
 }
 .footer_wrapper {
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   padding: 16px;
-  border-top: 1px solid #e1e7ed;
+  z-index: 1;
+  background-color: #fff;
 }
 .footer_lists {
   display: flex;
@@ -505,6 +510,7 @@ ol li {
   border-radius: 4px;
   line-height: 20px;
   border: none;
+  z-index: 100;
 }
 .context_menu ul li{
   font-size: 14px;
@@ -518,5 +524,44 @@ ol li {
 }
 .context_menu ul li a{
   color: grey;
+}
+.read, .read .mail_hover_opt{
+  background-color: #f2f6fc;
+}
+.unread .mail_hover_opt{
+  background-color: #fff;
+}
+.read .mail_desc_preview span, .read .mailer_name h6{
+  font-weight: normal;
+}
+.all_mails_wrapper table tbody{
+  max-height: 600px;
+  overflow-y: auto;
+}
+.mail_hover_opt{
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  background-color: #f2f6fc;
+  z-index: 10;
+  height: 100%;
+  width: 200px;
+  border-bottom: 1px solid #e1e7ed;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.mail_hover_opt ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 30px;
+}
+.mail_hover_opt ul li{
+  width: 20px;
+  height: 20px;
+}
+.mail_hover_opt ul li a img{
+  width: 100%;
 }
 /* mail */

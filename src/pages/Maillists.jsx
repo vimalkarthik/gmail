@@ -10,7 +10,16 @@ function Mailists({ isSidebarOpen, isAllCheck, mailCheck }) {
     { id: 3, imgPath: "/../images/starred.png", name: "Bala Ive via Figma", title: "Bala Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. The attention to detail and the elegance of the design are truly remarkable Bravo! The attention to detail and the elegance of the design are truly remarkable", msgTime: "9:01 AM", isRead: false },
     { id: 4, imgPath: "/../images/starred.png", name: "Bala Ive via Figma", title: "Bala Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. The attention to detail and the elegance of the design are truly remarkable Bravo! The attention to detail and the elegance of the design are truly remarkable", msgTime: "9:01 AM", isRead: false },
     { id: 5, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "9:02 AM", isRead: true },
-    { id: 6, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "9:02 AM", isRead: true },
+    { id: 6, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "9:02 AM", isRead: false },
+    { id: 7, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "9:02 AM", isRead: true },
+    { id: 8, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "9:02 AM", isRead: false },
+    { id: 9, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "9:02 AM", isRead: true },
+    { id: 10, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "Mar 7", isRead: false },
+    { id: 11, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "Mar 6", isRead: true },
+    { id: 12, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "Mar 5", isRead: false },
+    { id: 13, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "Mar 4", isRead: true },
+    { id: 14, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "Mar 3", isRead: true },
+    { id: 15, imgPath: "/../images/starred.png", name: "Vimal Ive via Figma", title: "Vimal Ive mentioned you in Final SPEC", content: "Absolutely stunning work. The attention to detail and the elegance of the design are truly remarkable. Bravo!", msgTime: "Mar 2", isRead: false },
   ];
 
   const handleRowRightClick = (event, id) => {
@@ -102,6 +111,16 @@ function Mailists({ isSidebarOpen, isAllCheck, mailCheck }) {
                   </td>
                   <td>
                     <div className="time_and_date">{item.msgTime}</div>
+                  </td>
+                  <td>
+                  <div className="mail_hover_opt">
+                    <ul>
+                        <li><a href=""><img src="/../images/archive.png" alt="Archive" title="Archive"/></a></li>
+                        <li><a href=""><img src="/../images/delete.png" alt="Delete" /></a></li>
+                        <li><a href=""><img src="/../images/unread.png" alt="Unread" /></a></li>
+                        <li><a href=""><img src="/../images/snoozed.png" alt="Snooze" /></a></li>
+                    </ul>
+                  </div>
                   </td>
                 </tr>
               ))}
