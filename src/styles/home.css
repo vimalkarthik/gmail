@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
-
+/* dark-light theme css */
+.bg-dark{
+  background-color: #202124;
+}
+.text-white{
+  color: #fff;
+}
+.bg-white{
+  background-color: #f7f8fc;
+}
+.text-black{
+  color: #001d35;
+}
+/* dark-light theme css */
 * {
   padding: 0;
   margin: 0;
@@ -127,6 +140,9 @@ ol li {
   width: 24px;
   height: 24px;
   transition: 0.1s all ease-in;
+}
+.icons img{
+  width: 100%;
 }
 .icons:hover,
 .options:hover,
@@ -528,7 +544,7 @@ ol li {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  padding: 6px 48px;
+  padding: 7px 48px;
   border-bottom: 1px solid #e1e7ed;
 }
 .context_menu ul li:last-child {
