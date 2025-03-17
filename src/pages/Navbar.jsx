@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeProvider } from "./ThemeProvider";
 function Navbar({ toggleSidebar }) {
   return (
     <>
@@ -41,6 +42,11 @@ function Navbar({ toggleSidebar }) {
 
 
         <div className="gmail_lists">
+        <a href="#" onClick={ThemeProvider}>
+          <div className="icons">
+            <img src="/../images/night-mode.png" alt="Dark Mode" />
+          </div>
+          </a>
           <a href="#">
           <div className="icons">
             <img src="/../images/question.png" alt="Question" />
