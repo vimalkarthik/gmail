@@ -1,12 +1,13 @@
-// import logo from './logo.svg';
 import React from "react";
 import Home from "./pages/Home";
-import './App.css';
+import { ThemeProvider }  from "./pages/ThemeProvider";
+import "./App.css";
+
 function App() {
   return (
-<>
-<Home/>
-</>
+    <ThemeProvider>
+      <Home />
+    </ThemeProvider>
   );
 }
 
