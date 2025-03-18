@@ -1,16 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
 /* dark-light theme css */
-.bg-dark{
+.dark-theme{
   background-color: #202124;
-}
-.text-white{
   color: #fff;
 }
-.bg-white{
+
+.light-theme{
   background-color: #f7f8fc;
-}
-.text-black{
   color: #001d35;
+}
+.dark-theme .icons img{
+  filter: brightness(0) saturate(100%) invert(80%) sepia(3%) saturate(154%) hue-rotate(87deg) brightness(100%) contrast(90%);
+}
+
+.dark-theme .icons:hover, .dark-theme .mail_hover_opt ul li:hover{
+  outline: 10px solid #e9eef64f;
+  background-color: #e9eef64f;
+}
+.dark-theme .all_mails_wrapper table tbody tr, .dark-theme .footer_wrapper {
+  background-color: #202124;
+  color: #fff;
+}
+.dark-theme .mailer_name h6, .dark-theme .mail_desc_preview p, .dark-theme .mail_desc_preview span, .dark-theme .time_and_date{
+  color: #fff;
+}
+.dark-theme .sidebar_wrapper:is(h1,h2,h3,h4,h6,a,p){
+  color: #fff;
+}
+.dark-theme .mail_nav_tabs ul li img, .dark-theme .starred img, .dark-theme .side_menu_list img, .dark-theme .header_icons img, .dark-theme .pagination img, .dark-theme .keyboard img, .dark-theme .search_icon img, .dark-theme .options img, .dark-theme .footer_range img, .dark-theme .mail_hover_opt ul li img {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(3%) saturate(154%) hue-rotate(87deg) brightness(100%) contrast(90%);
+}
+.dark-theme .mail_wrapper {
+  border: 1px solid #e1e7ed40;
+  background-color: #353537;
+}
+.dark-theme .header_wrapper{
+  background-color: #353537;
+  border-radius: 16px 16px 0 0;
+}
+.dark-theme .mail_nav_tabs, .dark-theme .footer_wrapper, .dark-theme .search{
+  background-color: #353537;
+}
+.dark-theme .mail_nav_tabs ul, .dark-theme .all_mails_wrapper table tbody tr{
+  border-bottom: 1px solid #e1e7ed40;
+}
+.dark-theme .mail_nav_tabs ul li.nav_active a img, .dark-theme .mail_nav_tabs ul li.nav_active a p{
+  color: #fff;
+  filter: brightness(0) invert(1);
+}
+.dark-theme .mail_nav_tabs ul li.nav_active::after{
+  background-color: #fff;
+}
+.dark-theme .mail_nav_tabs ul li p, .dark-theme .sidebar_menus ul li p, .dark-theme .sidebar_menus ul li span, .dark-theme .sidebar_menus.label_wrapper span, .dark-theme .footer_wrapper p, .dark-theme .policies a , .dark-theme .activity a, .dark-theme .footer_wrapper span, .dark-theme .page_numberlist{
+  color: #c4c7c5;
+}
+.dark-theme .menu_active{
+  background-color: #353537;
+}
+.dark-theme .hamburger span{
+  background-color: #c4c7c5;
+}
+.dark-theme .context_menu{
+  background-color: #202124;
+  border: 1px solid #e1e7ed40;
+}
+.dark-theme .context_menu ul li{
+  border-bottom: 1px solid #e1e7ed40;
+}
+.dark-theme .context_menu ul li a{
+  color: #c4c7c5;
+}
+.dark-theme .read .mail_hover_opt, .dark-theme .unread .mail_hover_opt{
+  background-color: #202124;
+  border-bottom: 1px solid #e1e7ed40;
+}
+.dark-theme .top_search{
+  color: #fff;
+}
+.dark-theme input[type="checkbox"] {
+  background-color: #444 !important; 
+  border-color: #ccc;
+}
+.dark-theme .profile{
+  border: 1px solid #e1e7ed40;
+  border-radius: 50%;
+}
+.dark-theme .logo_dark{
+  display: block;
+}
+.dark-theme .logo_light{
+  display: none;
 }
 /* dark-light theme css */
 * {
@@ -25,7 +105,9 @@ body {
   width: 100%;
   font-family: "Roboto", sans-serif;
   background-color: #f7f8fc;
+  transition: background-color 0.3s, color 0.3s;
 }
+
 ul li,
 ol li {
   list-style-type: none;
@@ -64,6 +146,12 @@ ol li {
 }
 .logo img {
   width: 100%;
+}
+.logo_dark{
+  display: none;
+}
+.logo_light{
+  display: block;
 }
 .navbar_top {
   width: 100%;
@@ -457,9 +545,10 @@ ol li {
   width: 100%;
   /* position: absolute;
   bottom: 0; */
-  padding: 16px;
+  padding: 16px 16px 30px 16px;
   z-index: 1;
   background-color: #fff;
+  border-radius: 0 0 16px 16px;
 }
 .footer_lists {
   display: flex;
@@ -639,3 +728,61 @@ ol li {
   align-items: center;
 }
 /* mail */
+
+/* Default light mode checkbox */
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  appearance: none; 
+  border: 2px solid #999;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  background-color: white; 
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark mode checkbox */
+.dark-theme input[type="checkbox"], .dark-theme .all_checkbox input[type="checkbox"] {
+  background-color: #444; 
+  border-color: #ccc;
+}
+.all_checkbox input[type="checkbox"] {
+  border-color: #202124;
+}
+/* Checked state */
+input[type="checkbox"]:checked {
+  background-color: transparent; 
+  border-color: #BABEC1;
+}
+
+/* Dark mode checked */
+.dark-theme input[type="checkbox"]:checked {
+  background-color: transparent;
+  border-color: #BABEC1;
+}
+
+/* Custom checkmark */
+input[type="checkbox"]::after {
+  content: url('/./public/images/check-mark.png');
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -44%);
+  display: none;
+}
+.dark-theme input[type="checkbox"]::after{
+  filter: brightness(0) invert(1);
+}
+
+/* Show checkmark when checked */
+input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+/* responsive css starts */
+@media (max-width: 1200px){
+  
+}
+/* responsive css ends */
