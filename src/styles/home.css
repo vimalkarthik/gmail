@@ -106,6 +106,7 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #f7f8fc;
   transition: background-color 0.3s, color 0.3s;
+  position: relative;
 }
 
 ul li,
@@ -781,8 +782,72 @@ input[type="checkbox"]:checked::after {
   display: block;
 }
 
+.compose_mob_btn {
+  display: none;
+}
+.compose_web_btn {
+  display: block;
+}
+
 /* responsive css starts */
 @media (max-width: 1200px){
-  
+  .search{
+    width: 50%;
+  }
+  .search > div{
+    width: 60%;
+  }
+  .all_mails_wrapper table tbody{
+    max-height: 500px;
+  }
+  .gmail_lists{
+    gap: 20px;
+  }
+  .menu_wrapper{
+    width: 80%;
+  }
+  .sidebar_wrapper{
+    max-width: 246px;
+  }
+  .compose_btn{
+    height: 50px;
+  }
+}
+@media (max-width: 1024px){
+  .gmail_lists{
+    gap: 15px;
+  }
+  .all_mails_wrapper table tbody tr{
+    gap: 12px;
+    align-items: baseline;
+  }
+  .footer_lists{
+    align-items: baseline;
+  }
+  .policies{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer_range input[type="range"]{
+    width: 180px;
+  }
+  .footer_wrapper{
+    padding-inline: 8px;
+  }
+  .menu_wrapper{
+    width: 75%;
+  }
+}
+@media (max-width: 991px){
+  .compose_mob_btn {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: calc(100% - 9.7rem);
+    z-index: 10;
+  }
+  .compose_web_btn {
+    display: none;
+  }
 }
 /* responsive css ends */
