@@ -8,7 +8,7 @@ import { ThemeContext }  from "./ThemeProvider";
 function Home() {
   const { theme } = useContext(ThemeContext); 
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  let [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isAllCheck, setIsAllCheck] = useState(false);
   const [checkedItems, setCheckedItems] = useState({});
 
